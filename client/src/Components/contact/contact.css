@@ -1,0 +1,71 @@
+.contact-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #3CB5DE;
+    margin-top: 15px;
+    background-color: #fff;
+    padding: 0.5em;
+}
+
+.contact-box p {
+    color: rgb(95, 90, 90);
+}
+.contact-container {
+    width: 90%;
+    margin: auto;
+}
+.contact-container h4 {
+    color :#3CB5DE;
+}
+.contact-container h3 {
+    color: rgb(95, 90, 90);
+
+}
+.contact-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 6px;
+}
+.contact-box {
+    position:relative;
+    padding:0.8em;
+}
+.contact-icon {
+    position: absolute;
+    top:5px;
+    right:50px;
+}
+.contact-box img {
+    width: 2.3em;
+    height: 2.3em;
+    position : absolute;
+    margin: 0 4px;
+}
+.contact-box {
+    border-radius: 5px;
+}
+
+.article-title{
+    text-align: left;
+    font-size: 14px;
+    margin-left: 19px;
+
+}
+.contactreq-message{
+    height: 95px;
+    width: 90%;
+    padding: 0.75em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(175, 175, 175);
+    box-shadow: -2px 4px 4px 2px #E6E6E6;
+    border-radius: 5px;
+}
+
+.request-container{
+    margin-bottom: 6em;
+}

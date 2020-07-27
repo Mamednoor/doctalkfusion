@@ -1,0 +1,40 @@
+.navbar-container li {
+    display: flex;
+    flex-direction: column-reverse;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+    height: 4em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar-container {
+    text-align: center;
+    background-color: #3CB5DE;
+    height: 3.5em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+li:focus-within{
+    background-color: #1487B5;
+}
+
+.navbar-container ul {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+}
+.search-img {
+    width: 1.9em;
+    margin-bottom: 15px;
+}
+.search-img:focus-within {
+    background-color: green;
+}

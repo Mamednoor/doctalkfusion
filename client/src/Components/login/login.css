@@ -1,0 +1,77 @@
+.login-button-sign {
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 21px;
+    border: none;
+    background-color: #3CB5DE;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+}
+.login-container {
+    text-align: center;
+}
+.login-button-sign p {
+    color: white;
+    text-align: center;
+    margin: 0auto;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: center;
+}
+
+.login-form input {
+    border: 2px solid #3CB5DE;
+    box-shadow: -2px 4px 4px 2px #E6E6E6;
+    border-radius: 4px;
+    height: 3em;
+    width: 272px;
+    margin-bottom: 20px;
+    padding: 0.5em 1em;
+}
+.login-form input::placeholder{
+    text-align: center;
+
+}
+.login-link{
+    text-decoration: none;
+}
+.login-link-title {
+    color: #3CB5DE;
+    font-size: 16px;
+}
+
+.login-div-img img {
+    width: 15em;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3em;
+    /* margin-bottom: 1em; */
+}
+
+.radio-container input {
+    width: max-content;
+    padding: 0 20px;
+    margin: 1.5em 1em;
+}
+
+.radio-container input:focus {
+    color:white;
+    background-color: #3CB5DE;
+}
+
+.login-container {
+    margin: 0;
+}
