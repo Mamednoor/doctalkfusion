@@ -14,3 +14,5 @@ Création d'une application web mobile permettant de mettre en relation des méd
 * Node.js avec Express
 * Socket.io
 * MySQL
+
+![alt text](https://github.com/Mamednoor/doctalkfusion/blob/master/Untitled%20Diagram.jpg)
