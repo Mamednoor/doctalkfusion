@@ -7,4 +7,8 @@ const connection = mysql.createConnection({
   database: process.env.DB_NAME
 })
 
+const d = new Date()
+const date = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate()
+console.log("server is up", date)
+
 module.exports = connection
