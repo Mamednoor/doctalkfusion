@@ -1,6 +1,6 @@
 const mysql = require('mysql')
 
-const dbSetting = typeof process.env.CLEARDB_DATABASE_URL === 'string'
+const dbSettings = typeof process.env.CLEARDB_DATABASE_URL === 'string'
   ? process.env.CLEARDB_DATABASE_URL
   : {
     host: process.env.DB_HOST, 
@@ -13,6 +13,6 @@ const dbSetting = typeof process.env.CLEARDB_DATABASE_URL === 'string'
   const date = d.getDate() + '-' + (d.getMonth() + 1) + '-' + d.getFullYear()
   console.log("server is up", date)
   
-  const connection = mysql.createConnection(dbSetting)
+  const connection = mysql.createPool(dbSettings)
 
 module.exports = connection
