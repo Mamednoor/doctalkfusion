@@ -6,6 +6,7 @@ const app = express()
 // const app = require('express')()
 const port = process.env.PORT || 7500
 const server = app.listen(port)
+console.log(`${port}`)
 const io = require('socket.io')(server)
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
