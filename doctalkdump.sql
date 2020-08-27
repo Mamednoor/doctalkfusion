@@ -30,9 +30,9 @@ CREATE TABLE `doctor` (
   `profession_id` int(11) NOT NULL,
   `doc_profesionnal_code` varchar(45) NOT NULL,
   `doc_email` varchar(45) DEFAULT NULL,
-  `do_password` varchar(45) NOT NULL,
+  `doc_password` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `do_email_UNIQUE` (`doc_email`),
+  UNIQUE KEY `doc_email_UNIQUE` (`doc_email`),
   KEY `fk_doctor_profession_idx` (`profession_id`),
   CONSTRAINT `fk_doctor_profession` FOREIGN KEY (`profession_id`) REFERENCES `profession` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
