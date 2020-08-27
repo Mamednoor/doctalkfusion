@@ -80,7 +80,7 @@ const Login = () => {
         <label>
           <input
             type="password"
-            name="name"
+            name="password"
             value={password}
             placeholder="Enter your Password"
             onChange={(e) => setPassword(e.target.value)}
