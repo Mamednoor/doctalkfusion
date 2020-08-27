@@ -16,14 +16,14 @@ function CardDoctor(props) {
    
     useEffect(() => {
         const idPatient = localStorage.getItem('patient')
-        axios.get(`http://localhost:7500/patients/${idPatient}/doctors/${doctor.id}`)
+        axios.get(`/patients/${idPatient}/doctors/${doctor.id}`)
             .then(res => res.data.length !== 0 ? setFavorite(true) : setFavorite(false))
     }, [favorite])
 
     useEffect(() => {
         const idPatient = localStorage.getItem('patient')
         
-        axios.get(`http://localhost:7500/patients/${idPatient}`)
+        axios.get(`/patients/${idPatient}`)
         .then(res => setPatient(res.data))
     }, [])
 
@@ -50,9 +50,9 @@ function CardDoctor(props) {
         const target = e.target
         setFavorite(!favorite)
         if (!favorite)
-            axios.post('http://localhost:7500/patients/doctors', { patient_id: id, doctor_id: parseInt(target.parentNode.id) })
+            axios.post('/patients/doctors', { patient_id: id, doctor_id: parseInt(target.parentNode.id) })
         else
-            axios.delete('http://localhost:7500/patients/doctors', { data: { patient_id: id, doctor_id: parseInt(target.parentNode.id) } })
+            axios.delete('/patients/doctors', { data: { patient_id: id, doctor_id: parseInt(target.parentNode.id) } })
     }
 
     return (

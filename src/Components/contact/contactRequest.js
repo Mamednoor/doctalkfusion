@@ -12,13 +12,13 @@ const ContactRequest = () => {
 
     const fetchInvitations = () => {
         const docId = localStorage.getItem('doctor')
-        axios.get(`http://localhost:7500/invitations/${docId}`)
+        axios.get(`/invitations/${docId}`)
             .then(res => setInvitations(res.data))
     }
 
     const onDelete = (e) => {
         setRefresh(!refresh)
-        axios.delete('http://localhost:7500/invitations', { data: { id: e.target.id } })
+        axios.delete('/invitations', { data: { id: e.target.id } })
     }
     return (
         <div>

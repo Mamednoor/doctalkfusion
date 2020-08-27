@@ -12,10 +12,10 @@ const MessageBox = () => {
         const idDoc = localStorage.getItem('doctor')
         const idPatient = localStorage.getItem('patient')
         if (isDoctor === 'true') {
-            Axios.get(`http://localhost:7500/invitations/${idDoc}`)
+            Axios.get(`/invitations/${idDoc}`)
                 .then(res => setInvitations(res.data))
         } else {
-            Axios.get(`http://localhost:7500/invitations/patients/${idPatient}`)
+            Axios.get(`/invitations/patients/${idPatient}`)
                 .then(res => setInvitations(res.data))
         }
     }, [])

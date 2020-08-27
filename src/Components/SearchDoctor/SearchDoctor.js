@@ -14,9 +14,9 @@ function SearchDoctor(props) {
     const [city, setCity] = useState('')
     const [professionType, setProfessionType] = useState('')
     useEffect(() => {
-        axios.get('http://localhost:7500/professions')
+        axios.get('/professions')
             .then(res => setProfessions(res.data))
-        axios.get('http://localhost:7500/doctors')
+        axios.get('/doctors')
             .then(res => setDoctors(res.data))
     }, [])
 

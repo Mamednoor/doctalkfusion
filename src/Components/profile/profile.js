@@ -24,10 +24,10 @@ const Profile = () => {
     const idDoc = localStorage.getItem('doctor')
     const idPatient = localStorage.getItem('patient')
     if (isDoctor === 'true') {
-      Axios.get(`http://localhost:7500/doctors/${idDoc}`)
+      Axios.get(`/doctors/${idDoc}`)
         .then(res => setCurrrentUser(res.data))
     } else {
-      Axios.get(`http://localhost:7500/patients/${idPatient}`)
+      Axios.get(`/patients/${idPatient}`)
         .then(res => setCurrrentUser(res.data))
     }
   }, [])

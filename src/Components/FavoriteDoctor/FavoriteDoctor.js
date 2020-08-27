@@ -10,7 +10,7 @@ function FavoriteDoctor(props) {
     const [favoriteDoc, setFavoriteDoc] = useState([])
     useEffect(() => {
         const patient_id = 1
-        axios.get(`http://localhost:7500/patients/${patient_id}/doctors`)
+        axios.get(`/patients/${patient_id}/doctors`)
             .then(res => setFavoriteDoc(res.data))
     })
     axios.get()
