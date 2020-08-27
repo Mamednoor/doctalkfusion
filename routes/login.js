@@ -10,7 +10,7 @@ router.post('/doctor', (req, res) => {
   } = req.body
   console.log(req.body)
   connection.query(
-    'SELECT * FROM doctor WHERE doc_email = ? AND do_password = ?', [doc_email, doc_password],
+    'SELECT * FROM doctor WHERE doc_email = ? AND doc_password = ?', [doc_email, doc_password],
     (err, results) => {
       if (err) {
         return res.status(400).json({
