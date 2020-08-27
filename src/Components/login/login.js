@@ -62,7 +62,7 @@ const Login = () => {
           <input
             type="button"
             id="doctor"
-            name="doctor"
+            name="drone"
             value="Doctor"
             onClick={(e) => setActive(e.target.id)}
           />
