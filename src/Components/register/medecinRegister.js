@@ -12,7 +12,7 @@ function Medecin() {
   const [password, setPassword] = useState("");
 
   const handleClick = (e) => { // ajouter les doc_ au req 
-  axios.post('https://doc-talk-back.herokuapp.com/doctor', {doc_city: city, doc_email: email, doc_firstname: firstname, doc_lastname: lastname,doc_password: password, doc_profession: profession, doc_professionnal_code: professionCode})
+  axios.post('https://doc-talk-back.herokuapp.com/doctors', {doc_city: city, doc_email: email, doc_firstname: firstname, doc_lastname: lastname,doc_password: password, doc_profession: profession, doc_professionnal_code: professionCode})
   return e.preventDefault()
 }
 
