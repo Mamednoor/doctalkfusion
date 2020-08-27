@@ -10,7 +10,7 @@ function FavoriteDoctor(props) {
     const [favoriteDoc, setFavoriteDoc] = useState([])
     useEffect(() => {
         const patient_id = 1
-        axios.get(`/patients/${patient_id}/doctors`)
+        axios.get(`https://doc-talk-back.herokuapp.com/patients/${patient_id}/doctors`)
             .then(res => setFavoriteDoc(res.data))
     })
     axios.get()

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Axios from 'axios'
+import axios from 'axios'
 import Header from '../header/header'
 import MessageBoxCont from './messageBoxCont'
 
@@ -12,10 +12,10 @@ const MessageBox = () => {
         const idDoc = localStorage.getItem('doctor')
         const idPatient = localStorage.getItem('patient')
         if (isDoctor === 'true') {
-            Axios.get(`https://doc-talk-back.herokuapp.com/invitations/${idDoc}`)
+            axios.get(`https://doc-talk-back.herokuapp.com/invitations/${idDoc}`)
                 .then(res => setInvitations(res.data))
         } else {
-            Axios.get(`https://doc-talk-back.herokuapp.com/invitations/patients/${idPatient}`)
+            axios.get(`https://doc-talk-back.herokuapp.com/invitations/patients/${idPatient}`)
                 .then(res => setInvitations(res.data))
         }
     }, [])

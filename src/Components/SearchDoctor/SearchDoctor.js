@@ -14,9 +14,9 @@ function SearchDoctor(props) {
     const [city, setCity] = useState('')
     const [professionType, setProfessionType] = useState('')
     useEffect(() => {
-        axios.get('/professions')
+        axios.get('https://doc-talk-back.herokuapp.com/professions')
             .then(res => setProfessions(res.data))
-        axios.get('/doctors')
+        axios.get('https://doc-talk-back.herokuapp.com/doctors')
             .then(res => setDoctors(res.data))
     }, [])
 

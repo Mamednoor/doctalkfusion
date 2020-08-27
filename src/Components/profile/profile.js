@@ -5,7 +5,7 @@ import Modal from "react-modal";
 import Modify from "../../Assets/modify.png";
 
 import "./profile.css";
-import Axios from "axios";
+import axios from "axios";
 
 const customStyles = {
   content: {
@@ -24,10 +24,10 @@ const Profile = () => {
     const idDoc = localStorage.getItem('doctor')
     const idPatient = localStorage.getItem('patient')
     if (isDoctor === 'true') {
-      Axios.get(`/doctors/${idDoc}`)
+      axios.get(`https://doc-talk-back.herokuapp.com/doctors/${idDoc}`)
         .then(res => setCurrrentUser(res.data))
     } else {
-      Axios.get(`/patients/${idPatient}`)
+      axios.get(`https://doc-talk-back.herokuapp.com/patients/${idPatient}`)
         .then(res => setCurrrentUser(res.data))
     }
   }, [])

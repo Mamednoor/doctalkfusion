@@ -12,13 +12,13 @@ const ContactRequest = () => {
 
     const fetchInvitations = () => {
         const docId = localStorage.getItem('doctor')
-        axios.get(`/invitations/${docId}`)
+        axios.get(`https://doc-talk-back.herokuapp.com/invitations/${docId}`)
             .then(res => setInvitations(res.data))
     }
 
     const onDelete = (e) => {
         setRefresh(!refresh)
-        axios.delete('/invitations', { data: { id: e.target.id } })
+        axios.delete('https://doc-talk-back.herokuapp.com/invitations', { data: { id: e.target.id } })
     }
     return (
         <div>

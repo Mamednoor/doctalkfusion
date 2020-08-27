@@ -10,7 +10,7 @@ function Patient() {
   const [password, setPassword] = useState("");
 
   const handleClick = (e) => { // ajouter les doc_ au req 
-    axios.post('/login', {pa_city: city,  pa_firstname: firstname, pa_lastname: lastname,pa_mail: email,pa_password: password})
+    axios.post('https://doc-talk-back.herokuapp.com/login', {pa_city: city,  pa_firstname: firstname, pa_lastname: lastname,pa_mail: email,pa_password: password})
     return e.preventDefault()
   }
 

@@ -16,14 +16,14 @@ function CardDoctor(props) {
    
     useEffect(() => {
         const idPatient = localStorage.getItem('patient')
-        axios.get(`/patients/${idPatient}/doctors/${doctor.id}`)
+        axios.get(`https://doc-talk-back.herokuapp.com/patients/${idPatient}/doctors/${doctor.id}`)
             .then(res => res.data.length !== 0 ? setFavorite(true) : setFavorite(false))
     }, [favorite])
 
     useEffect(() => {
         const idPatient = localStorage.getItem('patient')
         
-        axios.get(`/patients/${idPatient}`)
+        axios.get(`https://doc-talk-back.herokuapp.com/patients/${idPatient}`)
         .then(res => setPatient(res.data))
     }, [])
 

@@ -12,7 +12,7 @@ const Login = () => {
   const history = useHistory();
   const handleClick = (e) => {
     if (active === 'doctor') {
-      axios.post("/login/doctor", {
+      axios.post("https://doc-talk-back.herokuapp.com/login/doctor", {
         doc_email: email,
         do_password: password,
       }).then(res => {
@@ -28,7 +28,7 @@ const Login = () => {
       })
     } 
     if(active === 'patient') {
-      axios.post("/login/patient", {
+      axios.post("https://doc-talk-back.herokuapp.com/login/patient", {
         pa_mail: email,
         pa_password: password,
       }).then(res => {
