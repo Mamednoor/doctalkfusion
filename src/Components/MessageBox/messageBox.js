@@ -12,10 +12,10 @@ const MessageBox = () => {
         const idDoc = localStorage.getItem('doctor')
         const idPatient = localStorage.getItem('patient')
         if (isDoctor === 'true') {
-            Axios.get(`/invitations/${idDoc}`)
+            Axios.get(`https://doc-talk-back.herokuapp.com/invitations/${idDoc}`)
                 .then(res => setInvitations(res.data))
         } else {
-            Axios.get(`/invitations/patients/${idPatient}`)
+            Axios.get(`https://doc-talk-back.herokuapp.com/invitations/patients/${idPatient}`)
                 .then(res => setInvitations(res.data))
         }
     }, [])
