@@ -6,7 +6,7 @@ const connection = require('../conf.js')
 router.post('/doctor', (req, res) => {
   const {
     doc_email,
-    do_password
+    doc_password
   } = req.body
   console.log(req.body)
   connection.query(
