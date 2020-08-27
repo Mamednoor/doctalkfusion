@@ -14,7 +14,7 @@ const Login = () => {
     if (active === 'doctor') {
       axios.post("https://doc-talk-back.herokuapp.com/login/doctor", {
         doc_email: email,
-        do_password: password,
+        doc_password: password,
       }).then(res => {
         if(res.status !== 401){
           console.log(res.data)
